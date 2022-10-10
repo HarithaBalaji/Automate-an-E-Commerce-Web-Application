@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-10-10T19:48:01 IST" name="Default suite" finished-at="2022-10-10T19:48:38 IST" duration-ms="37074">
+    <groups>
+      <group name="Chrome">
+        <method signature="ecommerce.LaunchChrome()[pri:0, instance:ecommerceweb.ecommerce@223191a6]" name="LaunchChrome" class="ecommerceweb.ecommerce"/>
+        <method signature="ecommerce.f()[pri:0, instance:ecommerceweb.ecommerce@223191a6]" name="f" class="ecommerceweb.ecommerce"/>
+      </group> <!-- Chrome -->
+      <group name="Firefox">
+        <method signature="ecommerce.LaunchFirefox()[pri:0, instance:ecommerceweb.ecommerce@223191a6]" name="LaunchFirefox" class="ecommerceweb.ecommerce"/>
+        <method signature="ecommerce.firefox()[pri:0, instance:ecommerceweb.ecommerce@223191a6]" name="firefox" class="ecommerceweb.ecommerce"/>
+      </group> <!-- Firefox -->
+    </groups>
+    <test started-at="2022-10-10T19:48:01 IST" name="Default test" finished-at="2022-10-10T19:48:38 IST" duration-ms="37074">
+      <class name="ecommerceweb.ecommerce">
+        <test-method signature="LaunchChrome()[pri:0, instance:ecommerceweb.ecommerce@223191a6]" started-at="2022-10-10T19:48:01 IST" name="LaunchChrome" finished-at="2022-10-10T19:48:03 IST" duration-ms="2029" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchChrome -->
+        <test-method signature="LaunchFirefox()[pri:0, instance:ecommerceweb.ecommerce@223191a6]" started-at="2022-10-10T19:48:03 IST" name="LaunchFirefox" finished-at="2022-10-10T19:48:07 IST" duration-ms="4003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchFirefox -->
+        <test-method signature="f()[pri:0, instance:ecommerceweb.ecommerce@223191a6]" started-at="2022-10-10T19:48:07 IST" name="f" finished-at="2022-10-10T19:48:38 IST" depends-on-methods="ecommerceweb.ecommerce.LaunchChrome" duration-ms="30977" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method signature="firefox()[pri:0, instance:ecommerceweb.ecommerce@223191a6]" started-at="2022-10-10T19:48:38 IST" name="firefox" finished-at="2022-10-10T19:48:38 IST" depends-on-methods="ecommerceweb.ecommerce.LaunchFirefox" duration-ms="12" status="FAIL">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The driver executable must exist: C:\Users\Haritha\Downloads\Firefox webdriver\geckodriver-v0.31.0-win64.exe]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The driver executable must exist: C:\Users\Haritha\Downloads\Firefox webdriver\geckodriver-v0.31.0-win64.exe
+at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:342)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:147)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:142)
+at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:45)
+at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:181)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
+at org.openqa.selenium.firefox.GeckoDriverService.createDefaultService(GeckoDriverService.java:94)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:94)
+at ecommerceweb.ecommerce.firefox(ecommerce.java:85)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firefox -->
+      </class> <!-- ecommerceweb.ecommerce -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
